@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../../node_modules/font-awesome/css/font-awesome.css';
+
 
  class Product extends Component {
 
     state = {
-        showProductInfo: false
+        showProductInfo: false,
     };
 
     render() {
@@ -13,10 +15,9 @@ import PropTypes from 'prop-types';
         return (
             <div className="card card-body mb-3"> 
             <h4> 
-                <i className="fas fa-mobile-alt"></i>
-                    Name: {name}
-                <i  
-                 onClick={()=> this.setState({showProductInfo: !this.state.showProductInfo})} className="fas fa-sort-down"></i>
+                <i className="fa fa-mobile"> Name: {name}  <i  
+                 onClick={()=> this.setState({showProductInfo: !this.state.showProductInfo})}
+                 className="fa fa-sort-down" style={{cursor: 'pointer'}}></i></i>
             </h4>
             {showProductInfo ?  (<ul>
                     <li className="list-group-item">inStock:{inStock}</li>
