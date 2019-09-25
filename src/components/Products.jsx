@@ -28,12 +28,12 @@ class Products extends Component {
     render() {
         const {products} = this.state
         return (
-          <div>
-               <h1>Products</h1>
+          <React.Fragment>
+               <h1>Products <i className="fas fa-store"></i></h1>
               {products.map(product =>(
                   <Product key={product.id} name ={product.name} inStock={product.inStock} price={product.price}/>
               ))}
-          </div>
+          </React.Fragment>
         )
     }
 }
